@@ -112,7 +112,7 @@ b = a.pop(1)  # 리스트 a의 1번째 원소 20을 삭제하고 b에 반환
 print(b)  # 20
 
 
-# 문자열도 사실은 컨테이너 자료형이었다.
+# 문자열도 사실은 컨테이너 자료형
 # "hello" 문자열은 "h", "e", "l", "l", "o" 5개의 문자가 연속으로 나열된 집합체이다.
 hello = "Hello World!"
 print(len(hello))  # 12 (공백, 느낌표 포함)
@@ -126,7 +126,7 @@ print(b)  # 안녕안녕안녕
 # 문자열 덧셈과 슬라이싱을 이용하여 마치 수정한 것 같은 효과를 줄 수 있다.
 word = "python"
 new_word = "j" + word[1:]
-print(new_word)
+print(new_word)  # jython
 
 # Formatting : 문자열 안에 변수의 값을 삽입하는 방법
 name = "hee"
@@ -219,6 +219,17 @@ for number in numbers:
 # 8
 # 10
 
+# 홀수 출력
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+for number in numbers:
+    if number % 2 == 1:
+        print(number)
+# 1
+# 3
+# 5
+# 7
+# 9
+
 # for i in range(n)
 for i in range(3):
     print(i)
@@ -251,3 +262,169 @@ for i in range(len(numbers)):
 # 5
 
 # 짝수번째 인덱스의 원소만 출력
+numbers = [1, 2, 3, 4, 5]
+for i in range(len(numbers)):
+    if i % 2 == 0:
+        print(numbers[i])
+# 1
+# 3
+# 5
+
+
+# while 반복문 : 반복 횟수가 정해져 있지 않은 경우 (사용자가 반복 횟수 조절)
+# 조건문의 결과가 True일 경우 반복, False일 경우 중단
+# 증감식이 없으면 무한루프 발생 (break로 종료할 수도 있다.)
+# 조건문에 들어가는 변수에 대한 초기화 필수
+
+number = 1  # 초기화
+while number <= 5:  # 조건
+    print(number)
+    number += 1  # 증감식이 있어야만 반복을 종료할 수 있다.
+# 1
+# 2
+# 3
+# 4
+# 5
+
+# while문으로 리스트 순회
+numbers = [10, 20, 30, 40, 50]
+i = 0  # 초기화
+while i < len(numbers):  # 조건
+    print(numbers[i])
+    i += 1  # 증감식
+# 10
+# 20
+# 30
+# 40
+# 50
+
+# while문을 조건문과 함께 사용하기 -> 필터링
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+i = 0  # 초기화
+# 짝수만 출력
+while i < len(numbers):
+    if numbers[i] % 2 == 0:
+        print(numbers[i])
+    i += 1  # 증감식
+# 2
+# 4
+# 6
+# 8
+# 10
+
+# 리스트가 빌 때까지 삭제하면서 그 삭제한 원소를 출력하기
+# 리스트는 원소가 1개 이상이면 True, 원소가 없으면 False
+numbers = [1, 2, 3, 4, 5]
+while numbers:  # 조건 (numbers가 비는 순간 반복 종료)
+    delete_number = numbers.pop()
+    print(delete_number)
+
+print(numbers)  # []
+
+
+# break : 반복문을 강제 종료 (for문, while문 사용 가능)
+# 특정 조건을 만족했을 때 반복문 종료
+
+# for문에서 break
+numbers = [1, 2, 3, 4, 5]
+for number in numbers:
+    print(number)
+
+    # 원소 3을 만난 경우 반복 종료
+    if number == 3:
+        print("반복을 종료합니다.")
+        break
+# 1
+# 2
+# 3
+# 반복을 종료합니다.
+
+
+# while문에서 break
+numbers = [1, 2, 3, 4, 5]
+i = 0
+while True:
+    print(numbers[i])
+
+    # 원소 3을 만난 경우 반복 종료
+    if numbers[i] == 3:
+        print("반복을 종료합니다.")
+        break
+
+    i += 1
+# 1
+# 2
+# 3
+# 반복을 종료합니다.
+
+
+# 같은 들여쓰기 레벨에서 break의 아래 부분은 결코 실행 X, 코드 작성 X
+numbers = [1, 2, 3, 4, 5]
+for number in numbers:
+    print(number)
+
+    # 원소 3을 만난 경우 반복 종료
+    if number == 3:
+        print("반복을 종료합니다.")
+        break
+        Print("이 부분은 실행되지 않습니다.")
+# 1
+# 2
+# 3
+# 반복을 종료합니다.
+
+
+# cuntinue : 다른 반복으로 강제 이동 (for문, while문 사용 가능)
+# 특정 조건을 만족했을 때 더 이상 아래 부분을 실행하지 않고, 다음 반복으로 넘어간다.
+# 필터링이라고 생각 (continue를 두어 원하는 데이터만 출력 가능)
+
+# for문에서 continue
+number = [1, 2, 3, 4, 5]
+for number in numbers:
+    if number % 2 == 0:  # 만약 짝수라면
+        continue  # 아래를 실행하지 않고 다음 반복으로 넘어감
+    print(number)  # 홀수만 출력
+# 1
+# 3
+# 5
+
+# while문에서 continue
+number = 0
+while number < 5:
+    number += 1  # 증감식
+    if number % 2 == 0:  # 만약 짝수라면
+        continue  # 아래를 실행하지 않고 다음 반복으로 넘어감
+    print(number)  # 홀수만 출력
+# 1
+# 3
+# 5
+
+# 1부터 20까지의 정수 중 2의 배수도 아니고 3의 배수도 아닌 정수만 출력
+for i in range(1, 21):
+    if i % 2 == 0:
+        continue  # 2의 배수라면 다음 반복으로 넘어감
+    if i % 3 == 0:
+        continue  # 3의 배수라면 다음 반복으로 넘어감
+    print(i)
+# 1
+# 5
+# 7
+# 11
+# 13
+# 17
+# 19
+
+# 같은 들여쓰기 레벨에서 continue의 아래 부분은 결코 실행X, 코드 작성X
+number = 0
+while number <= 5:
+    number += 1
+
+    if number % 2 == 0:
+        continue
+        print("이 부분은 실행되지 않습니다.")
+        
+    print(number)
+# 1
+# 3
+# 5
+
