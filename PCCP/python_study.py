@@ -428,3 +428,100 @@ while number <= 5:
 # 3
 # 5
 
+
+
+# 반복문 (Loop)
+# 컨테이너 자료형의 여러 원소들에 대해 특정 처리를 할 때 유용
+
+numbers = [1, 2, 3, 4, 5]
+for i in range(len(numbers)):  # range(5) = 0, 1, 2, 3, 4
+    if i % 2 == 0:  # 짝수 번째 인덱스에 위치한 원소 (리스트의 크기와 상관없이 항상 짝수 번째 원소 출력)
+        print(numbers[i])
+# 1
+# 3
+# 5
+
+
+numbers = [1, 2, 3, 4, 5]
+for i in numbers:  # 1, 2, 3, 4, 5
+    if i % 2 == 0:  # 짝수인 원수의 값 (리스트에 있는 짝수 값들 출력)
+        print(numbers[i])
+# 3
+# 5
+
+
+
+# 리스트, 딕셔너리, 조건문, 반복문
+
+# 여러 자료구조를 섞어서 표현
+user = {
+    'total_user': 3,
+    'information': [
+        {'name': 'alex', 'age': 3, 'license': True},
+        {'name': 'june', 'age': 7, 'license': False},
+        {'name': 'peter', 'age': 4, 'license': False}
+    ]
+}
+
+
+# 제어문 if, 반복문 for
+# [문제] 어떤 광산에서는 채굴한 광물들의 등급을 상품인 1등급부터 하품인 3등급까지 나누어 등급을 매긴 후, 해당 정보를 저장해서 관리합니다.
+# A 광산은 10개의 광물을 채굴하였고 각각 등급은 다음과 같습니다.
+gems = [3, 3, 1, 2, 3, 2, 2, 3, 3, 1]
+
+# 채굴한 광물들 중 1등급 광물이 존재하는지 여부는 어떻게 알 수 있을까요?
+# 방법 1 : in 연산자
+gems = [3, 3, 1, 2, 3, 2, 2, 3, 3, 1]
+if 1 in gems:
+    print(True)
+else:
+    print(False)
+# True
+
+# 방법 2 : for문과 제어문
+gems = [3, 3, 1, 2, 3, 2, 2, 3, 3, 1]
+grade1 = False  # 특정 변수를 통해 여부를 저장하는 편이 좋습니다.
+for i in gems:
+    if i == 1:
+        grade1 = True
+        break  # 효율성을 위한 미리 브레이크
+print(grade1)
+# True
+
+# 1, 2, 3등급 광물은 각각 몇 개가 있는지 어떻게 기록하면 좋을까요?
+gems = [3, 3, 1, 2, 3, 2, 2, 3, 3, 1]
+grades = {1:0, 2:0, 3:0}
+for i in gems:
+    grades[i] += 1  # 딕셔너리는 인덱스 1부터 시작
+print(grades)
+# {1: 2, 2: 3, 3: 5}
+
+# 만약 광물의 등급의 합계가 15 이하면 성공, 23 이하면 보통, 30을 초과하면 실패라고 할 때, 올해의 등급에 따른 성공 척도를 출력하려면 어떻게 해야 할까요?
+gems = [3, 3, 1, 2, 3, 2, 2, 3, 3, 1]
+result = sum(gems)
+
+if result <= 15:
+    print('성공')
+elif 15 < result <= 23:
+    print('보통')
+else:
+    print('실패')
+# 보통
+
+
+# [문제] max(), min() 함수의 직접 구현
+nums = [7, 1, 2, 4, 6, 8, 3]
+
+# 최댓값
+max_num = 1  # 작은 수로 초기화
+for num in nums:
+    if max_num < num:
+        max_num = num  # max_num = 7->8
+print(max_num)  # 8
+
+# 최솟값
+min_num = 9999  # 큰 수로 초기화
+for num in nums:
+    if min_num > num:
+        min_num = num  # min_num = 7->1
+print(min_num)  # 1
