@@ -8,7 +8,26 @@
 # 이용자의 ID가 담긴 문자열 배열 id_list, 각 이용자가 신고한 이용자의 ID 정보가 담긴 문자열 배열 report, 정지 기준이 되는 신고 횟수 k가 매개변수로 주어질 때, 각 유저별로 처리 결과 메일을 받은 횟수를 배열에 담아 return 하도록 solution 함수를 완성해주세요.
 # (예시) id_list ["muzi", "frodo", "apeach", "neo"] / report ["muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi"] / k=2 / result [2,1,1,0]
 
+'''
+문제 조건 정리
 
+1명 -> 한번에 1명씩 제한없이 신고 가능.
+    -> 1명 여러번 신고 가능 but, 1회로 처리.
+    
+k번 신고당함 -> 정지, 신고한 유저들에게 메일로 발송함. (자료구조로 id저장하고 있어야.)
+            정지먹을때마다 보내는게 아니라, 전체 input이 다 주어지고나서 취합해서 메일을 보냄.
+            
+원하는 자료구조 모양 -> frodo가 muzi에게 여러번 신고당해도 1로 체크만 되길 원함. (가산되길 원하면 +=1로 수정가능)
+{'frodo' : 
+    {'muzi':1,
+    'appeach':1,
+    }
+}
+frodo가 신고를 받았는데, muzi, appeach가 신고했다는 뜻.
+취합은 report_dict[id_value]의 len을 돌려서 k이상인지 판별하고, 된다면 그 key들을 돌려서(dict에 대한 for loop은 key를 대상으로 돌려줍니다.) id list에 넣어주기.
+'''
+
+# 방법 1
 import collections   # defaultdict()를 쓰기 위해
 
 def solution(id_list, report, k):
@@ -53,3 +72,7 @@ def solution(id_list, report, k):
 print(solution(["muzi", "frodo", "apeach", "neo"], 
                ["muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi"], 
                2))
+
+
+# 방법 2
+# 그래프
