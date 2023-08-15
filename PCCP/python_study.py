@@ -691,4 +691,13 @@ a.remove(3)
 print(a)  # [1, 2, 4, 5]
 
 
-# .sort() : 
+# .sort() : 리스트를 오름차순으로 정렬
+# 옵션으로 reverse=True 를 주면 내림차순으로 정렬
+a = [3, 5, 1, 4, 2]
+a.sort()  # 오름차순
+
+b = [3, 5, 1, 4, 2]
+b.sort(reverse=True)  # 내림차순
+
+print(a)  # [1, 2, 3, 4, 5]
+print(b)  # [5, 4, 3, 2, 1]
