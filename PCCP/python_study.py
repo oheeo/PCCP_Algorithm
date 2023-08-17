@@ -736,3 +736,26 @@ s = "kyle,alex,justin,ken"
 print(s.split(","))  
 # ['kyle', 'alex', 'justin', 'ken']
 
+# 기존 문자의 기본값은 공백이다.
+s = "I play the piano"
+print(s.split())
+# ['I', 'play', 'the', 'piano']
+
+
+# .strip(제거할 문자) : 문자열의 왼쪽과 오른쪽에서 특정 문자를 제거하여 새로운 문자열로 반환
+# 기존 문자열은 변경 X
+s = "aHello worlda"
+print(s.strip("a"))
+# Hello world
+
+# 제거할 문자의 기본값은 공백이다.
+s = " Hello world "
+print(s.strip())
+# Hello world
+
+# 제거할 문자를 여러 개 넣으면, 해당하는 문자들을 양쪽에서 모두 제거한 새로운 문자열을 반환함
+s = "Hello world"
+print(s.strip("Hd"))
+# ello worl
+
+
