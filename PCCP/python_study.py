@@ -768,3 +768,13 @@ print(s.find("t"))
 s = "python"
 print(s.find("j"))
 # -1
+
+
+# .index(찾는 문자) : 문자열에서 찾는 문자가 처음으로 나타나는 인덱스를 반환함
+s = "python"
+print(s.index("t"))
+# 2
+
+# 찾는 문자가 없다면 에러 발생
+# s = "python"
+# print(s.index("j"))
