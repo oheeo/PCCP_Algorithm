@@ -778,3 +778,15 @@ print(s.index("t"))
 # 찾는 문자가 없다면 에러 발생
 # s = "python"
 # print(s.index("j"))
+
+
+# .count(개수를 셀 문자) : 문자열에서 특정 문자의 개수를 반환함
+s = "hello python"
+print(s.count("l"))
+# 2
+
+# 길이가 2 이상인 문자열의 개수도 셀 수 있다.
+s = "banana"
+print(s.count("na"))
+# 2
+
