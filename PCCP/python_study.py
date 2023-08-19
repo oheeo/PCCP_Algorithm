@@ -831,3 +831,9 @@ import module1
 print(module1.add(1, 2))
 # 3
 
+
+# random 모듈 : 난수(무작위 수)를 다루는 기능을 제공
+# random.randint(시작 숫자, 끝 숫자) : 시작 숫자부터 끝 숫자까지의 수 중에서 1개의 정수를 무작위로 반환
+import random
+number = random.randint(1, 5)  # 1, 2, 3, 4, 5 중 무작위로 1개를 반환
+print(number)
