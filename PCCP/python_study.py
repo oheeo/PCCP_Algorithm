@@ -790,3 +790,15 @@ s = "banana"
 print(s.count("na"))
 # 2
 
+
+# .replace(기존 문자, 새로운 문자) : 문자열에서 기존 문자를 새로운 문자로 치환한 새로운 문자열을 반환함
+# 기존 문자열은 변경 X
+s = "I play the piano"
+print(s.replace("piano","violin"))
+# I play the violin
+
+# 기존 문자를 빈 문자열("")로 치환하여 마치 해당 문자를 삭제한 효과도 가능
+s = "python"
+print(s.replace("p",""))
+# ython
+
