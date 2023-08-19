@@ -837,3 +837,18 @@ print(module1.add(1, 2))
 import random
 number = random.randint(1, 5)  # 1, 2, 3, 4, 5 중 무작위로 1개를 반환
 print(number)
+
+# random.choice(리스트) : 리스트 내의 원소 중 1개를 무작위로 반환
+import random
+numbers = [10, 20, 30, 40, 50]
+number = random.choice(numbers)
+print(number)
+
+# random.sample(리스트, 개수) : 리스트 내의 원소 중 지정한 개수만큼 무작위로 뽑아서 리스트에 담아 반환
+import random
+numbers = [10, 20, 30, 40, 50]
+samples = random.sample(numbers, 3)  # 리스트 numbers에서 무작위로 3개를 반환하여 리스트에 담음
+print(samples)
+# [20, 10, 30]
+
+
