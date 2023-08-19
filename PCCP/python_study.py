@@ -817,3 +817,7 @@ print(" ".join(words))
 words = ["a", "p", "p", "l", 'e']
 print("".join(words))
 # apple
+
+# 리스트의 모든 원소들이 문자열이 아니면 에러 발생
+# numbers = [1, 2, "3", "4", "5"]
+# print("".join(numbers))
