@@ -812,3 +812,8 @@ print("$".join(words))
 words = ["I", "play", "the", "piano"]
 print(" ".join(words))
 # I play the piano
+
+# 삽입할 문자를 빈 문자열("")로 지정하면 하나의 문자열로 합치는 효과
+words = ["a", "p", "p", "l", 'e']
+print("".join(words))
+# apple
