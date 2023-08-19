@@ -802,3 +802,13 @@ s = "python"
 print(s.replace("p",""))
 # ython
 
+
+# 삽입할 문자.join(리스트) : 리스트의 문자열 원소들 사이에 각각 특정 문자를 삽입한 결과를 새로운 문자열로 반환함
+words = ["I", "play", "the", "piano"]
+print("$".join(words))
+# I$play$the$piano
+
+# 삽입할 문자를 공백(" ")으로 지정하면 띄어쓰기를 한 효과
+words = ["I", "play", "the", "piano"]
+print(" ".join(words))
+# I play the piano
