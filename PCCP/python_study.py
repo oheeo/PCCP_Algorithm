@@ -863,3 +863,21 @@ for i in range(5):
 # 1초 기다린 후, 2 출력
 # 1초 기다린 후, 3 출력
 # 1초 기다린 후, 4 출력
+
+
+# 카운트다운이 있는 로또 번호 추첨기
+import time
+import random
+
+# 5초 카운트다운
+for i in range(5, 0, -1):
+    time.sleep(1)
+    print(f"{i}초 남았습니다.")
+
+# 로또 번호 6개 추첨
+numbers = list(range(1, 46))
+lotto = random.sample(numbers, 6)
+
+lotto.sort()  # 오름차순 정렬
+
+print(lotto)
