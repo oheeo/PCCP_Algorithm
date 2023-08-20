@@ -854,30 +854,60 @@ print(samples)
 
  # time 모듈 : 시간을 다루는 기능을 제공
  # time.sleep(초) : 일정 시간(초) 동안 프로그램의 동작을 일시정시 할 수 있다.
-import time
-for i in range(5):
-    time.sleep(1)  # 1초 동안 프로그램 동작을 정지
-    print(f"1초 기다린 후, {i} 출력")
-# 1초 기다린 후, 0 출력
-# 1초 기다린 후, 1 출력
-# 1초 기다린 후, 2 출력
-# 1초 기다린 후, 3 출력
-# 1초 기다린 후, 4 출력
+# import time
+# for i in range(5):
+#     time.sleep(1)  # 1초 동안 프로그램 동작을 정지
+#     print(f"1초 기다린 후, {i} 출력")
+# # 1초 기다린 후, 0 출력
+# # 1초 기다린 후, 1 출력
+# # 1초 기다린 후, 2 출력
+# # 1초 기다린 후, 3 출력
+# # 1초 기다린 후, 4 출력
 
 
-# 카운트다운이 있는 로또 번호 추첨기
-import time
-import random
+# # 카운트다운이 있는 로또 번호 추첨기
+# import time
+# import random
 
-# 5초 카운트다운
-for i in range(5, 0, -1):
-    time.sleep(1)
-    print(f"{i}초 남았습니다.")
+# # 5초 카운트다운
+# for i in range(5, 0, -1):
+#     time.sleep(1)
+#     print(f"{i}초 남았습니다.")
 
-# 로또 번호 6개 추첨
-numbers = list(range(1, 46))
-lotto = random.sample(numbers, 6)
+# # 로또 번호 6개 추첨
+# numbers = list(range(1, 46))
+# lotto = random.sample(numbers, 6)
 
-lotto.sort()  # 오름차순 정렬
+# lotto.sort()  # 오름차순 정렬
 
-print(lotto)
+# print(lotto)
+
+
+print("-------------------------------------------------------")
+
+
+# 이중 for문
+for a in range(4):
+    print(f"a가 {a}일 때")
+    for b in range(4):
+        print(f"b는 {b}")
+# a가 0일 때
+# b는 0
+# b는 1
+# b는 2
+# b는 3
+# a가 1일 때
+# b는 0
+# b는 1
+# b는 2
+# b는 3
+# a가 2일 때
+# b는 0
+# b는 1
+# b는 2
+# b는 3
+# a가 3일 때
+# b는 0
+# b는 1
+# b는 2
+# b는 3
