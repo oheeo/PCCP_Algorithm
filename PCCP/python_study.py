@@ -926,3 +926,11 @@ matrix = [
 print(matrix)  # [[3, 7, 9], [4, 2, 6], [8, 1, 5]]
 print(matrix[0])  # [3, 7, 9]
 print(matrix[2])  # [8, 1, 5]
+
+
+# 각 원소 접근 및 수정
+print(matrix[0][0])  # 3
+print(matrix[1][2])  # 6
+
+matrix[0][2] = 0
+print(matrix)  # [[3, 7, 0], [4, 2, 6], [8, 1, 5]]
