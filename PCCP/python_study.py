@@ -967,3 +967,9 @@ for i in range(3):
         total += matrix[i][j]
 
 print(total)  # 51
+
+
+# 이차원 리스트의 델타(delta) 탐색
+# 상하좌우 델타 값
+dr = [-1, 1, 0, 0]
+dc = [0, 0, -1, 1]
