@@ -935,6 +935,7 @@ print(matrix[1][2])  # 6
 matrix[0][2] = 0
 print(matrix)  # [[3, 7, 0], [4, 2, 6], [8, 1, 5]]
 
+
 # 이차원 리스트 순회
 matrix = [
     [1, 2, 3, 4],
@@ -950,3 +951,19 @@ for i in range(3):  # 3행
 # 1 2 3 4
 # 5 6 7 8
 # 9 0 1 2
+
+
+# 모든 원소의 합 구하기
+matrix = [
+    [0, 5, 3, 1],
+    [4, 6, 10, 8],
+    [9, -1, 1, 5]
+]
+
+total = 0
+
+for i in range(3):
+    for j in range(4):
+        total += matrix[i][j]
+
+print(total)  # 51
