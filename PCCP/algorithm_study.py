@@ -1,0 +1,7 @@
+# 파이썬 입출력
+# nums = input('입력해주세요: ')
+# print(nums, type(nums))
+
+nums = list(map(int, input().split()))
+print(nums, type(nums))
+# 1 2 3 입력시 [1, 2, 3] 출력
