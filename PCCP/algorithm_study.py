@@ -14,3 +14,5 @@ print(nums_matrix, type(nums_matrix))
 # 7 8 9
 # 입력시 [[1, 2, 3], [4, 5, 6], [7, 8, 9]] <class 'list'> 출력
 
+
+# 함수와 재귀함수
