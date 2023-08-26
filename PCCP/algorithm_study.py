@@ -21,4 +21,12 @@ def some_func(param1, param2):
 
 print(some_func(1, 2))  # [1, 2]
 
-# 재귀함수
+
+# 재귀함수 : 함수 내에서 동일한 함수가 실행되는 함수
+def fibo(n):
+    if n < 2 :  # 1은 더 쪼개지지 않음
+        return n
+    else:
+        return fibo(n-1) + fibo(n-2)  # 재귀 호출
+    
+print(fibo(10))  # 55
