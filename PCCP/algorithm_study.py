@@ -30,6 +30,7 @@ def fibo(n):
         return fibo(n-1) + fibo(n-2)  # 재귀 호출
 print(fibo(10))  # 55
 
+
 # 참고(효율적인 메모이제이션)
 memo = [0, 1]
 def fibo(n):
@@ -37,3 +38,20 @@ def fibo(n):
         memo.append(fibo(n-1) + fibo(n-2))
     return memo[n]
 print(fibo(10))  # 55
+
+
+# 이진검색
+nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+def binary_search(low, high, target):
+    if low > high:
+        return '찾지 못함'
+    
+    mid = (low + high)  // 2
+    if target == nums[mid]:
+        return mid
+    elif target < nums[mid]:
+        return binary_search(low, mid-1, target)
+    elif target > nums[mid]:
+        return binary_search(mid+1, high, target)
+
+print(binary_search(0, len(nums)-1, 7))  # 6
