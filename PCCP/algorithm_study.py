@@ -44,7 +44,7 @@ print(fibo(10))  # 55
 nums = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 def binary_search(low, high, target):
     if low > high:
-        return '찾지 못함'
+        return '찾지 못 함'
     
     mid = (low + high)  // 2
     if target == nums[mid]:
