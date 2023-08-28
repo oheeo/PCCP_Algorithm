@@ -55,3 +55,13 @@ def binary_search(low, high, target):
         return binary_search(mid+1, high, target)
 
 print(binary_search(0, len(nums)-1, 7))  # 6
+
+
+print("-----------------------------------------")
+
+
+# 리스트
+user = ['alex', 3, True]
+
+# 딕셔너리
+user = {'name': 'alex', 'age':3, 'license':True}
