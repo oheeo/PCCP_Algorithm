@@ -65,3 +65,34 @@ user = ['alex', 3, True]
 
 # 딕셔너리
 user = {'name': 'alex', 'age':3, 'license':True}
+
+# 여러 자료구조 섞어서
+users = {
+	'total_user': 3,
+	'information': [
+			{'name': 'alex', 'age':3, 'license':True},
+			{'name': 'june', 'age':7, 'license':False},
+			{'name': 'peter', 'age':4, 'license':False}
+	]
+}
+
+
+# 제어문 if, 반복문 for
+# 어떤 광산에서는 채굴한 광물들의 등급을 상품인 1등급부터 하품인 3등급까지 나누어 등급을 매긴 후, 해당 정보를 저장해서 관리합니다.
+# A 광산은 10개의 광물을 채굴하였고 각각 등급은 다음과 같습니다.
+gems = [3, 3, 1, 2, 3, 2, 2, 3, 3, 1]
+# 채굴한 광물들 중 1등급 광물이 존재하는지 여부는 어떻게 알 수 있을까요?
+
+# 방법 1 : in 연산자를 활용합니다.
+if 1 in gems:
+	print(True)
+else:
+	print(False)
+        
+# 방법 2 : for문과 제어문을 섞어 활용합니다.
+grade1 = False  # 특정 변수(flag)를 통해 여부를 저장하는 편이 좋습니다.
+for i in gems:
+    if i == 1:
+        grade1 = True
+        break  # 효율성을 위한 미리 브레이크
+print(grade1)
