@@ -121,3 +121,27 @@ elif 15 < result <= 23:
     print('보통')
 else:
     print('실패')
+
+
+# 실전 문제풀이
+# max(), min() 함수의 직접 구현
+nums = [7, 1, 2, 4, 6, 8, 3]
+
+# 최댓값
+max_num = -1  # 작은 수로 초기화
+for num in nums:
+    if max_num < num:
+        max_num = num
+
+print(max_num)
+
+min_num = 9999  # 큰 수로 초기화
+for num in nums:
+    if min_num > num:
+        min_num = num
+print(min_num)
+
+
+print("-----------------------------------------")
+
+
