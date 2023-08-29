@@ -147,10 +147,22 @@ print("-----------------------------------------")
 
 # 스트링 알고리즘
 # 파이써닉 코드
+# word = input('단어를 입력하세요: ')
+
+# if word == word[::-1]:
+#     print('회문입니다')
+# else:
+#     print('회문이 아닙니다')
+
+
+# 반복문 사용
 word = input('단어를 입력하세요: ')
 
-if word == word[::-1]:
+reversed_word = ''
+for i in word:
+    reversed_word = i + reversed_word
+
+if word == reversed_word:
     print('회문입니다')
 else:
     print('회문이 아닙니다')
-
