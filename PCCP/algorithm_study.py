@@ -230,3 +230,17 @@ for r in range(3):
         trails.append(matrix[r][c])
 
 print(trails)  # [3, 7, 9, 4, 2, 6, 8, 1, 5]
+
+
+# 행으로 순회, 열은 역순으로
+matrix = [[3, 7, 9],
+		      [4, 2, 6],
+	    	  [8, 1, 5]]
+
+trails = []  # 순회 궤적 담아줄 리스트
+
+for r in range(3):
+    for c in range(2, -1, -1):  # 역순인데, 새끼 리스트의 길이 - 1 시작!
+        trails.append(matrix[r][c])
+
+print(trails) # [9, 7, 3, 6, 2, 4, 5, 1, 8]
