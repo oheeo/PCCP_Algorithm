@@ -211,3 +211,22 @@ def find_word(p, t):
     return '못찾았음'
 
 print(find_word(p, t))
+
+
+print("-----------------------------------------")
+
+
+# 2차원 리스트
+
+# 행 우선 순회
+matrix = [[3, 7, 9],
+		      [4, 2, 6],
+	    	  [8, 1, 5]]
+
+trails = []  # 순회 궤적 담아줄 리스트
+
+for r in range(3):
+    for c in range(3):  # r 이 하나 고정된 상태에서 각각
+        trails.append(matrix[r][c])
+
+print(trails)  # [3, 7, 9, 4, 2, 6, 8, 1, 5]
