@@ -276,3 +276,21 @@ for r in range(3):
         trails.append(matrix[c][r])  # 여기가 바뀝니다.
 
 print(trails)  # [3, 4, 8, 7, 2, 1, 9, 6, 5]
+
+
+# 전치
+matrix = [[3, 7, 9],
+		      [4, 2, 6],
+	    	  [8, 1, 5]]
+
+for r in range(3):
+    for c in range(3):
+        if r > c: # r < c로 해도 됩니다.
+            matrix[r][c], matrix[c][r] = matrix[c][r], matrix[r][c]
+
+for i in range(3):
+    print(matrix[i])
+
+# [3, 4, 8]
+# [7, 2, 1]
+# [9, 6, 5]
