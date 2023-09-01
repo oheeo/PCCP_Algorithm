@@ -305,3 +305,17 @@ print(transposed_matrix)
 
 
 # 회전
+# 오른쪽으로 90도 회전시킨 이차원 리스트
+n = 3
+rotated_matrix = [[0] * n for _ in range(n)]  # 초기화
+
+for i in range(n):
+    for j in range(n):
+        rotated_matrix[i][j] = matrix[n-j-1][i]
+# rotated_matrix 결과
+
+[
+    [7, 4, 1],
+    [8, 5, 2],
+    [9, 6, 3]
+]
