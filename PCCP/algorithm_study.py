@@ -262,3 +262,17 @@ for r in range(3):
             trails.append(matrix[r][c])
 
 print(trails) # [3, 7, 9, 6, 2, 4, 8, 1, 5]
+
+
+# 열 우선 순회
+matrix = [[3, 7, 9],
+		      [4, 2, 6],
+	    	  [8, 1, 5]]
+
+trails = []
+
+for r in range(3):
+    for c in range(3):
+        trails.append(matrix[c][r])  # 여기가 바뀝니다.
+
+print(trails)  # [3, 4, 8, 7, 2, 1, 9, 6, 5]
