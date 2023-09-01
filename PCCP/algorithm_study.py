@@ -325,12 +325,22 @@ n = 3
 rotated_matrix = [[0] * n for _ in range(n)]
 
 for i in range(n):
-    for j in range(n):
-        rotated_matrix[i][j] = matrix[j][n-i-1]
+    for j in range(n):
+        rotated_matrix[i][j] = matrix[j][n-i-1]
 # rotated_matrix 결과
 
 [
     [3, 6, 9],
     [2, 5, 8],
     [1, 4, 7]
+]
+
+# zip을 이용한 오른쪽 90도 회전
+rotated_matrix = list(zip(*matrix[::-1]))
+# rotated_matrix 결과
+
+[
+    (7, 4, 1),
+    (8, 5, 2),
+    (9, 6, 3)
 ]
