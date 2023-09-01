@@ -302,3 +302,6 @@ print(zipped_matrix) # [(3, 4, 8), (7, 2, 1), (9, 6, 5)]
 transposed_matrix = list(map(list, zip(*matrix)))
 print(transposed_matrix)
 # [[3, 4, 8], [7, 2, 1], [9, 6, 5]]
+
+
+# 회전
