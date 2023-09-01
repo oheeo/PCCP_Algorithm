@@ -290,7 +290,11 @@ for r in range(3):
 
 for i in range(3):
     print(matrix[i])
-
 # [3, 4, 8]
 # [7, 2, 1]
 # [9, 6, 5]
+
+# zip을 활용한 전치하기 => 원소가 튜플이 됩니다.
+zipped_matrix = list(zip(*matrix))
+print(zipped_matrix) # [(3, 4, 8), (7, 2, 1), (9, 6, 5)]
+
