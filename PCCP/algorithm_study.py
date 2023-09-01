@@ -298,3 +298,7 @@ for i in range(3):
 zipped_matrix = list(zip(*matrix))
 print(zipped_matrix) # [(3, 4, 8), (7, 2, 1), (9, 6, 5)]
 
+# 전치 완료 후, 원소를 리스트로 활용하고 싶을 때
+transposed_matrix = list(map(list, zip(*matrix)))
+print(transposed_matrix)
+# [[3, 4, 8], [7, 2, 1], [9, 6, 5]]
