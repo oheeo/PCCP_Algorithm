@@ -345,3 +345,12 @@ rotated_matrix = list(zip(*matrix[::-1]))
     (9, 6, 3)
 ]
 
+# zip을 이용한 왼쪽 90도 회전
+rotated_matrix = list(zip(*matrix))[::-1]
+# rotated_matrix 결과
+
+[
+    (3, 6, 9),
+    (2, 5, 8),
+    (1, 4, 7)
+]
