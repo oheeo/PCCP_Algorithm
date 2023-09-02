@@ -360,3 +360,18 @@ print("-----------------------------------------")
 
 
 # 스택, 큐, DFS,BFS
+# 스택
+# 웹 서핑을 하다가 뒤로 가는 경우를 코드로 구현
+visits = [] # 방문 기록지
+# 1. 처음으로 구글에 방문
+visits.append('google') #  ['google']
+
+# 2. 그다음 인스타그램에 방문
+visits.append('instagram') # ['google', 'instagram']
+
+# 3. 그다음 페이스북에 방문
+visits.append('facebook') # ['google', 'instagram', 'facebook']
+
+# 4. 뒤로가기 버튼을 누름
+visits.pop()
+print(visits) # ['google', 'instagram'] => 다시 인스타그램 페이지로 돌아옴
