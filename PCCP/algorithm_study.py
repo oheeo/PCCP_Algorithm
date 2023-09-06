@@ -423,3 +423,16 @@ for _ in range(E):  # 간선 갯수만큼 돌면서 연결 정보를 받음
 #  [0, 0, 1, 0, 0, 0, 1, 0],  => 5번 포도알은 2, 6번 가능
 #  [0, 0, 0, 0, 1, 1, 0, 1],  => 6번 포도알은 4, 5, 7번 가능
 #  [0, 0, 0, 1, 0, 0, 1, 0]]  => 7번 포도알은 3, 6번 가능
+
+
+# 인접 리스트로 정리
+V, E = map(int, input().split())
+
+adj_list = [[] for _ in range(V + 1)]
+
+for _ in range(E):
+    start, end = map(int, input().split())
+    adj_list[start].append(end)
+    adj_list[end].append(start)  # 양방향
+
+# adj_list = [[], [2, 3], [1, 4, 5], [1, 7], [2, 6], [2, 6], [4, 5, 7], [6, 3]]
