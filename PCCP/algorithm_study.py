@@ -375,3 +375,28 @@ visits.append('facebook') # ['google', 'instagram', 'facebook']
 # 4. 뒤로가기 버튼을 누름
 visits.pop()
 print(visits) # ['google', 'instagram'] => 다시 인스타그램 페이지로 돌아옴
+
+
+# class를 활용한 스택의 직접 구현 코드
+class Stack:
+    def __init__(self,n):
+        self.top = -1
+        self.stack = [0]*n
+
+    def push(self,data):
+        if self.top == len(self.stack) - 1:
+            return None
+        self.top += 1
+        self.stack[self.top] = data
+
+    def pop(self):
+        if self.top == -1:
+            return None
+        self.top -= 1
+        return self.stack[self.top+1]
+
+my_stack = Stack(10)
+my_stack.push('alex')
+print(my_stack)
+print(my_stack.pop())
+print(my_stack)
