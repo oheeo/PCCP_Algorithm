@@ -362,44 +362,44 @@ print("-----------------------------------------")
 # 스택, 큐, DFS,BFS
 # 스택
 # 웹 서핑을 하다가 뒤로 가는 경우를 코드로 구현
-visits = [] # 방문 기록지
-# 1. 처음으로 구글에 방문
-visits.append('google') #  ['google']
+# visits = [] # 방문 기록지
+# # 1. 처음으로 구글에 방문
+# visits.append('google') #  ['google']
 
-# 2. 그다음 인스타그램에 방문
-visits.append('instagram') # ['google', 'instagram']
+# # 2. 그다음 인스타그램에 방문
+# visits.append('instagram') # ['google', 'instagram']
 
-# 3. 그다음 페이스북에 방문
-visits.append('facebook') # ['google', 'instagram', 'facebook']
+# # 3. 그다음 페이스북에 방문
+# visits.append('facebook') # ['google', 'instagram', 'facebook']
 
-# 4. 뒤로가기 버튼을 누름
-visits.pop()
-print(visits) # ['google', 'instagram'] => 다시 인스타그램 페이지로 돌아옴
+# # 4. 뒤로가기 버튼을 누름
+# visits.pop()
+# print(visits) # ['google', 'instagram'] => 다시 인스타그램 페이지로 돌아옴
 
 
 # class를 활용한 스택의 직접 구현 코드
-class Stack:
-    def __init__(self,n):
-        self.top = -1
-        self.stack = [0]*n
+# class Stack:
+#     def __init__(self,n):
+#         self.top = -1
+#         self.stack = [0]*n
 
-    def push(self,data):
-        if self.top == len(self.stack) - 1:
-            return None
-        self.top += 1
-        self.stack[self.top] = data
+#     def push(self,data):
+#         if self.top == len(self.stack) - 1:
+#             return None
+#         self.top += 1
+#         self.stack[self.top] = data
 
-    def pop(self):
-        if self.top == -1:
-            return None
-        self.top -= 1
-        return self.stack[self.top+1]
+#     def pop(self):
+#         if self.top == -1:
+#             return None
+#         self.top -= 1
+#         return self.stack[self.top+1]
 
-my_stack = Stack(10)
-my_stack.push('alex')
-print(my_stack)
-print(my_stack.pop())
-print(my_stack)
+# my_stack = Stack(10)
+# my_stack.push('alex')
+# print(my_stack)
+# print(my_stack.pop())
+# print(my_stack)
 
 
 # DFS 깊이 우선 탐색
@@ -412,6 +412,7 @@ for _ in range(E):  # 간선 갯수만큼 돌면서 연결 정보를 받음
     start, end = map(int, input().split())  # 시작점과 끝점
     adj_matrix[start][end] = 1
     adj_matrix[end][start] = 1  # 양방향 그래프니까!!
+print(adj_matrix)
 
 # adj_matrix print 결과
 
@@ -434,5 +435,25 @@ for _ in range(E):
     start, end = map(int, input().split())
     adj_list[start].append(end)
     adj_list[end].append(start)  # 양방향
-
+print(adj_list)
 # adj_list = [[], [2, 3], [1, 4, 5], [1, 7], [2, 6], [2, 6], [4, 5, 7], [6, 3]]
+
+
+# 왜 stack을 쓰고 깊이 우선 탐색이지?
+# 최초 시행
+visited = []
+stack = [1]
+
+# stack pop => 1 후에 갈 수 있는걸 골라보니? 2, 3번 포도알로 갈 수 있었음.
+visited = [1]
+stack = [2, 3] 
+
+# 그런 다음 다음 pop은 stack이니까 뒤부터 3이 튀어나옴 + 3이 갈 수 있는 7이 더해짐.
+visited = [1, 3]
+stack = [2, 7]  # 1은 visited에 있으니까 안들어감
+
+# 7을 뽑아냄
+visited = [1, 3, 7]
+stack = [2, 6]
+
+# 이런식으로 2는 계속 기다리고, 3 -> 7 -> 6 식으로 쭉쭉 "깊게" 뻗어나감!
