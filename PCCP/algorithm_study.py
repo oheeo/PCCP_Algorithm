@@ -460,7 +460,7 @@ stack = [2, 6]
 
 
 # DFS 풀이법
-# 스택 + 인접 행렬
+# 스택 + 인접 행렬 (공간 복잡도 높으나, 단방향 그래프인 경우 전치로 방향 전환 유리)
 V, E = map(int, input().split())  # Vertex, Edge 갯수
 
 adj_matrix = [[0] * (V + 1) for _ in range(V + 1)]  # 인접행렬 기본틀
