@@ -489,3 +489,14 @@ print('이동경로:', *visited)
 
 
 # 스택 + 인접 리스트 (공간 복잡도 낮음)
+V, E = map(int, input().split())  # Vertex, Edge 갯수
+
+adj_list = [[] for _ in range(V + 1)]  # 인접리스트 기본틀
+
+for _ in range(E):  # 간선 갯수만큼 돌면서 연결 정보를 받음
+    start, end = map(int, input().split())  # 시작점과 끝점
+    adj_list[start].append(end)
+    adj_list[end].append(start)  # 양방향 그래프니까!!
+
+stack = [1]  # 맨처음 시작점은 1번 포도알
+visited = []  # 궤적 기록용
