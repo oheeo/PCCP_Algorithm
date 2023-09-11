@@ -516,3 +516,13 @@ print('이동경로:', *visited)
 
 
 # 재귀 + 인접 행렬 (가독성은 좋으나 재귀 자체가 좀 느림)
+# 주의: 재귀함수를 활용하는 경우 return을 쓰면 끊길 수 있음
+def dfs(n):
+    if n not in visited:  # 우선 visited 없으면 넣어줌
+        visited.append(n)
+
+    for destination in range(V+1):
+        if adj_matrix[n][destination] and destination not in visited:
+            dfs(destination)  # 다음 재귀 깊이로 이동
+
+V, E = map(int, input().split())  # Vertex, Edge 갯수
