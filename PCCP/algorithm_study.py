@@ -526,3 +526,5 @@ def dfs(n):
             dfs(destination)  # 다음 재귀 깊이로 이동
 
 V, E = map(int, input().split())  # Vertex, Edge 갯수
+
+adj_matrix = [[0] * (V + 1) for _ in range(V + 1)]  # 인접행렬 기본틀
