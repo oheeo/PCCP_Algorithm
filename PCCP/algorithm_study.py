@@ -528,3 +528,8 @@ def dfs(n):
 V, E = map(int, input().split())  # Vertex, Edge 갯수
 
 adj_matrix = [[0] * (V + 1) for _ in range(V + 1)]  # 인접행렬 기본틀
+
+for _ in range(E):  # 간선 갯수만큼 돌면서 연결 정보를 받음
+    start, end = map(int, input().split())  # 시작점과 끝점
+    adj_matrix[start][end] = 1
+    adj_matrix[end][start] = 1  # 양방향 그래프니까!!
