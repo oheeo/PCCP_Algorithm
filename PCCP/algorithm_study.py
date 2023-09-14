@@ -590,3 +590,7 @@ def DFS(r, c):
         # if 0<=nr<N and 0<=nc<N: 조건도 가능(파이썬에서만)
         if nr<0 or nr>= N or nc <0 or nc>=N:
             continue
+        # 이미 방문을 했어도 종료(이것이 없으면 무한으로 방문)
+        # 이 아래 조건을 위에 한꺼번에 쓸거면 단축평가 오른쪽엔 가능함 근데 이거 따로쓸거면 맵 제한조건보다 위에 두면 조짐. 
+        if arr[nr][nc] == 0:
+            continue
