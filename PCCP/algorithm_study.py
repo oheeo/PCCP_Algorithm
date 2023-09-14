@@ -579,3 +579,8 @@ def DFS(r, c):
     # 해당 arr[r][c] 자리값이 1이므로 방문체크와 동시에 카운트를 1증가
     arr[r][c] = 0
     cnt += 1
+    # 4방 탐색
+    for i in range(4):
+        # 새로운 좌표값을 활용
+        nr = r + dr[i]
+        nc = c + dc[i]
