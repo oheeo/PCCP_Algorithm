@@ -587,4 +587,6 @@ def DFS(r, c):
         
         # 새로운 좌표값을 활용한 범위검사
         # 범위를 벗어나면 다른 방향을 탐색
-        
+        # if 0<=nr<N and 0<=nc<N: 조건도 가능(파이썬에서만)
+        if nr<0 or nr>= N or nc <0 or nc>=N:
+            continue
