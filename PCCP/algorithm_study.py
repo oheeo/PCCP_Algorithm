@@ -598,3 +598,6 @@ def DFS(r, c):
         DFS(nr, nc)  # 또 한 뎁스 들어가라!!
 N = int(input())
 arr = [list(map(int, input())) for _ in range(N)]  # 행의 길이만큼 만들어준다.
+
+# 입력이 끝났으면 처음 시작 위치 찾기
+for i in range(N):  # 행우선순회 하면서 전부다 보되
