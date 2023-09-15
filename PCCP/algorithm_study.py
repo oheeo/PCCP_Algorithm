@@ -606,3 +606,8 @@ for i in range(N):  # 행우선순회 하면서 전부다 보되
             cnt = 0  # prep 하고
             DFS(i, j)  # dfs 해!
             print(cnt)
+
+
+# 추가 참고 코드
+dr = [0, 0, 1, -1]
+dc = [1, -1, 0, 0]
