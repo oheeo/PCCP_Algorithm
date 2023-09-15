@@ -596,3 +596,5 @@ def DFS(r, c):
             continue
         # 걸러낼 조건을 모두 걸러내면 재귀가 가능
         DFS(nr, nc)  # 또 한 뎁스 들어가라!!
+N = int(input())
+arr = [list(map(int, input())) for _ in range(N)]  # 행의 길이만큼 만들어준다.
