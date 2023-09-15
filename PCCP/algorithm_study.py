@@ -601,3 +601,8 @@ arr = [list(map(int, input())) for _ in range(N)]  # 행의 길이만큼 만들�
 
 # 입력이 끝났으면 처음 시작 위치 찾기
 for i in range(N):  # 행우선순회 하면서 전부다 보되
+    for j in range(N):
+        if arr[i][j] == 1:  # 그자리가 1이야?
+            cnt = 0  # prep 하고
+            DFS(i, j)  # dfs 해!
+            print(cnt)
