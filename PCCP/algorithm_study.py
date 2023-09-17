@@ -621,3 +621,6 @@ def BFS(r, c):
     while Q:
         curr_r, curr_c = Q.pop(0)
         # 4방향탐색
+        for i in range(4):
+            nr = curr_r + dr[i]
+            nc = curr_c + dc[i]
