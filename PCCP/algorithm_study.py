@@ -618,4 +618,6 @@ def BFS(r, c):
     Q.append((r, c))
     dist[r][c] = 1
     # Q에 요소가 존재할때까지만 돌 것(빈 컨테이너가 되면 멈춰버린다)
-    
+    while Q:
+        curr_r, curr_c = Q.pop(0)
+        # 4방향탐색
