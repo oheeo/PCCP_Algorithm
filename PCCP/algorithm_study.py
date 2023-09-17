@@ -624,3 +624,5 @@ def BFS(r, c):
         for i in range(4):
             nr = curr_r + dr[i]
             nc = curr_c + dc[i]
+            # 범위를 벗어나면 다른방향 탐색
+            if nr < 0 or nr >= N or nc < 0 or nc >= N: continue
