@@ -631,3 +631,5 @@ def BFS(r, c):
 
             Q.append((nr, nc))
             dist[nr][nc] = dist[curr_r][curr_c] + 1
+
+N = int(input())
