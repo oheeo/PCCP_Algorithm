@@ -628,3 +628,6 @@ def BFS(r, c):
             if nr < 0 or nr >= N or nc < 0 or nc >= N: continue
             # 갈 수 없는 자리거나 이미 방문한 경우
             if arr[nr][nc] == 0 or dist[nr][nc] != 0: continue
+
+            Q.append((nr, nc))
+            dist[nr][nc] = dist[curr_r][curr_c] + 1
