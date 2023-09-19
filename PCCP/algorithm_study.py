@@ -634,3 +634,4 @@ def BFS(r, c):
 
 N = int(input())
 arr = [list(map(int, input())) for _ in range(N)]  # 행의 길이만큼 만들어준다
+dist = [[0]*N for _ in range(N)]
