@@ -640,4 +640,6 @@ for i in range(N):
     for j in range(N):
         if arr[i][j] == 1 and dist[i][j] == 0:
             BFS(i, j)
-            
+
+for d in dist: # 이 부분을 프린트해서 찍어봅니다!
+    print(*d)
