@@ -656,3 +656,6 @@ for d in dist: # 이 부분을 프린트해서 찍어봅니다!
 
 # 큐(Queue) 자료구조
 # 선입 선출 자료구조. ex) 식당의 대기줄, 편의점 재고
+
+people = ['april', 'jane', 'bob', 'brad']
+
