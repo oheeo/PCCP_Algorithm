@@ -659,4 +659,6 @@ for d in dist: # 이 부분을 프린트해서 찍어봅니다!
 
 people = ['april', 'jane', 'bob', 'brad']
 # 줄이 줄어든다면? => 앞쪽부터 빠져나간 것!
+people.pop(0)
+print(people) # ['jane', 'bob', 'brad']
 
