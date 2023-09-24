@@ -662,3 +662,6 @@ people = ['april', 'jane', 'bob', 'brad']
 people.pop(0)
 print(people) # ['jane', 'bob', 'brad']
 
+# 줄에 사람이 추가된 경우?
+people.append('kelly')
+print(people) # ['jane', 'bob', 'brad', 'kelly']
