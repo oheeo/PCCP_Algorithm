@@ -665,3 +665,5 @@ print(people) # ['jane', 'bob', 'brad']
 # 줄에 사람이 추가된 경우?
 people.append('kelly')
 print(people) # ['jane', 'bob', 'brad', 'kelly']
+
+# 중간에 추가된 경우나, 인원이 나가는 경우도 슬라이싱 삽입이나 insert 등으로 구현 가능합니다.
