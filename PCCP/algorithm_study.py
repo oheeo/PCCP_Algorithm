@@ -671,3 +671,4 @@ print(people) # ['jane', 'bob', 'brad', 'kelly']
 
 # BFS (너비 우선 탐색)
 # Queue를 활용하여 BFS를 구현할 수 있다.
+V, E = map(int, input().split())  # Vertex, Edge 갯수
