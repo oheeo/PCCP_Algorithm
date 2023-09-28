@@ -678,3 +678,4 @@ for _ in range(E):  # 간선 갯수만큼 돌면서 연결 정보를 받음
     start, end = map(int, input().split())  # 시작점과 끝점
     adj_matrix[start][end] = 1
     adj_matrix[end][start] = 1  # 양방향 그래프니까!!
+Q = [1]  # 맨처음 시작점은 1번 포도알
