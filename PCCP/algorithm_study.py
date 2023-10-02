@@ -684,3 +684,4 @@ while Q:  # 큐가 빌때까지 돌아라!
     current = Q.pop(0)  # 우선 큐에서 현재 위치 "앞에서부터" 뽑고,
     if current not in visited:  # 방문하지 않은 곳이라면,
         visited.append(current)  # 방문했다고 체크해줌
+
