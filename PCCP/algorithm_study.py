@@ -688,3 +688,6 @@ while Q:  # 큐가 빌때까지 돌아라!
     for destination in range(V+1):  # current 입장에서 어디로 갈 수 있는지 모조리 체크
         if adj_matrix[current][destination] and destination not in visited:  # 갈수있고 + 방문 안했으면!
             Q.append(destination) # 다음 갈 곳으로 큐에 저장
+print('이동경로:', *visited)
+
+# 이동경로: 1 2 3 4 5 7 6
